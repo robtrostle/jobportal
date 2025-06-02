@@ -92,12 +92,12 @@ public class Users {
     @Override
     public String toString() {
         return "Users{" +
-                "userId=" + userId +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", isActive=" + isActive +
-                ", registrationDate=" + registrationDate +
-                ", userTypeId=" + userTypeId +
-                '}';
+            "userId=" + userId +
+            ", email='" + email + '\'' +
+            ", password='" + password + '\'' +
+            ", isActive=" + isActive +
+            ", registrationDate=" + registrationDate +
+            ", userTypeId=" + userTypeId +
+            '}';
     }
 }

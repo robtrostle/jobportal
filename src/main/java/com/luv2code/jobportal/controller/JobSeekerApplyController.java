@@ -1,21 +1,7 @@
 package com.luv2code.jobportal.controller;
 
-
-import com.luv2code.jobportal.entity.JobPostActivity;
-import com.luv2code.jobportal.entity.JobSeekerApply;
-import com.luv2code.jobportal.entity.JobSeekerProfile;
-import com.luv2code.jobportal.entity.JobSeekerSave;
-import com.luv2code.jobportal.entity.RecruiterProfile;
-import com.luv2code.jobportal.entity.Users;
-import com.luv2code.jobportal.services.JobPostActivityService;
-import com.luv2code.jobportal.services.JobSeekerApplyService;
-import com.luv2code.jobportal.services.JobSeekerProfileService;
-import com.luv2code.jobportal.services.JobSeekerSaveService;
-import com.luv2code.jobportal.services.RecruiterProfileService;
-import com.luv2code.jobportal.services.UsersService;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
+import com.luv2code.jobportal.entity.*;
+import com.luv2code.jobportal.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -27,6 +13,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
+
 @Controller
 public class JobSeekerApplyController {
 
@@ -37,11 +27,9 @@ public class JobSeekerApplyController {
   private final RecruiterProfileService recruiterProfileService;
   private final JobSeekerProfileService jobSeekerProfileService;
 
+
   @Autowired
-  public JobSeekerApplyController(JobPostActivityService jobPostActivityService, UsersService usersService,
-      JobSeekerApplyService jobSeekerApplyService, JobSeekerSaveService jobSeekerSaveService,
-      RecruiterProfileService recruiterProfileService,
-      JobSeekerProfileService jobSeekerProfileService) {
+  public JobSeekerApplyController(JobPostActivityService jobPostActivityService, UsersService usersService, JobSeekerApplyService jobSeekerApplyService, JobSeekerSaveService jobSeekerSaveService, RecruiterProfileService recruiterProfileService, JobSeekerProfileService jobSeekerProfileService) {
     this.jobPostActivityService = jobPostActivityService;
     this.usersService = usersService;
     this.jobSeekerApplyService = jobSeekerApplyService;
@@ -111,6 +99,14 @@ public class JobSeekerApplyController {
       }
       jobSeekerApplyService.addNew(jobSeekerApply);
     }
+
     return "redirect:/dashboard/";
   }
 }
+
+
+
+
+
+
+

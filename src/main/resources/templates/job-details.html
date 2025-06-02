@@ -26,13 +26,13 @@
     ></label
     >
     <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
     >
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -72,10 +72,10 @@
 
         </ul>
         <img
-                class="rounded-circle me-3"
-                height="50px"
-                width="50x"
-                th:src="@{${user.photosImagePath}}"
+            class="rounded-circle me-3"
+            height="50px"
+            width="50x"
+            th:src="@{${user.photosImagePath}}"
         />
         <label th:text="${user.firstName+' '+user.lastName}" class="nav-item nav-link px-2 me-3">John Doe</label>
 
@@ -114,7 +114,7 @@
                 <div class="row ">
                     <div class="col-md-3">
                         <label class="text-left">Date Posted:<span
-                                th:text="${jobDetails.postedDate}">12 Nov, 2030</span></label>
+                            th:text="${jobDetails.postedDate}">12 Nov, 2030</span></label>
                     </div>
                     <div class="col-md-3 text-center">
                         <label> Salary: <span th:text="${jobDetails.salary}">50k - 120k/y</span></label>
@@ -132,6 +132,8 @@
                 <label class="large-label "> Job Description </label>
                 <div th:utext="${jobDetails.descriptionOfJob}"></div>
             </div>
+
+
 
             <div class="px-3 mb-3" sec:authorize="hasAuthority('Recruiter')">
                 <div class="row">
@@ -208,8 +210,8 @@
     var element = document.getElementById('back-link');
     element.setAttribute('href', document.referrer);
     element.onclick = function() {
-      history.back();
-      return false;
+        history.back();
+        return false;
     }
 </script>
 </body>

@@ -88,19 +88,16 @@ public class JobSeekerProfileController {
     String imageName = "";
     String resumeName = "";
 
-    //set profile image
     if (!Objects.equals(image.getOriginalFilename(), "")) {
       imageName = StringUtils.cleanPath(Objects.requireNonNull(image.getOriginalFilename()));
       jobSeekerProfile.setProfilePhoto(imageName);
     }
-    //set resume
+
     if (!Objects.equals(pdf.getOriginalFilename(), "")) {
-      //sanitize to prevent path traversal attacks
       resumeName = StringUtils.cleanPath(Objects.requireNonNull(pdf.getOriginalFilename()));
       jobSeekerProfile.setResume(resumeName);
     }
 
-    //save profile to DB
     JobSeekerProfile seekerProfile = jobSeekerProfileService.addNew(jobSeekerProfile);
 
     try {
@@ -119,3 +116,13 @@ public class JobSeekerProfileController {
     return "redirect:/dashboard/";
   }
 }
+
+
+
+
+
+
+
+
+
+

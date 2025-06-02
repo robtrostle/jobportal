@@ -20,10 +20,9 @@ public class RecruiterProfileService {
     private final UsersRepository usersRepository;
 
     @Autowired
-    public RecruiterProfileService(RecruiterProfileRepository recruiterRepository,
-        UsersRepository usersRepository) {
+    public RecruiterProfileService(RecruiterProfileRepository recruiterRepository, UsersRepository usersRepository) {
         this.recruiterRepository = recruiterRepository;
-      this.usersRepository = usersRepository;
+        this.usersRepository = usersRepository;
     }
 
     public Optional<RecruiterProfile> getOne(Integer id) {
@@ -34,14 +33,13 @@ public class RecruiterProfileService {
         return recruiterRepository.save(recruiterProfile);
     }
 
-  public RecruiterProfile getCurrentRecruiterProfile() {
-      Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-      if(!(authentication instanceof AnonymousAuthenticationToken)){
-          String currentUserName = authentication.getName();
-          Users users = usersRepository.findByEmail(currentUserName).orElseThrow(() ->
-              new UsernameNotFoundException("User not found"));
-          Optional<RecruiterProfile> recruiterProfile = getOne(users.getUserId());
-          return recruiterProfile.orElse(null);
-      } else return null;
-  }
+    public RecruiterProfile getCurrentRecruiterProfile() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (!(authentication instanceof AnonymousAuthenticationToken)) {
+            String currentUsername = authentication.getName();
+            Users users = usersRepository.findByEmail(currentUsername).orElseThrow(() -> new UsernameNotFoundException("User not found"));
+            Optional<RecruiterProfile> recruiterProfile = getOne(users.getUserId());
+            return recruiterProfile.orElse(null);
+        } else return null;
+    }
 }

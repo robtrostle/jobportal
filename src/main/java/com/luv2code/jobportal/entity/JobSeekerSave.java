@@ -10,6 +10,9 @@ import java.io.Serializable;
 })
 public class JobSeekerSave implements Serializable {
 
+//  @Version
+//  private Integer version;
+
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer id;

@@ -2,24 +2,24 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org/" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <link
-            th:rel="stylesheet"
-            th:href="@{/webjars/bootstrap/css/bootstrap.min.css} "
+        th:rel="stylesheet"
+        th:href="@{/webjars/bootstrap/css/bootstrap.min.css} "
     />
     <link
-            rel="stylesheet"
-            type="text/css"
-            media="all"
-            th:href="@{/css/font-awesome.min.css}"
+        rel="stylesheet"
+        type="text/css"
+        media="all"
+        th:href="@{/css/font-awesome.min.css}"
     />
     <link
-            rel="stylesheet"
-            type="text/css"
-            media="all"
-            th:href="@{/css/styles.css}"
+        rel="stylesheet"
+        type="text/css"
+        media="all"
+        th:href="@{/css/styles.css}"
     />
     <link
-            href="https://fonts.googleapis.com/css?family=Montserrat"
-            rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat"
+        rel="stylesheet"
     />
     <meta charset="ISO-8859-1"/>
     <title>Profile Setup</title>
@@ -37,10 +37,10 @@
     <div class="col-7">
         <div class="myForm">
             <form
-                    th:action="@{/job-seeker-profile/addNew}"
-                    th:object="${profile}"
-                    method="post"
-                    enctype="multipart/form-data"
+                th:action="@{/job-seeker-profile/addNew}"
+                th:object="${profile}"
+                method="post"
+                enctype="multipart/form-data"
             >
                 <div class="row" style="margin-right:0; margin-left:0;">
                     <div class="col-md-12">
@@ -61,58 +61,58 @@
                             <div class="col-md-6 pr-1">
                                 <input
 
-                                        id="user_account_id"
-                                        th:field="*{userAccountId}"
-                                        name="userAccountId"
-                                        type="text"
-                                        hidden
+                                    id="user_account_id"
+                                    th:field="*{userAccountId}"
+                                    name="userAccountId"
+                                    type="text"
+                                    hidden
                                 />
                                 <input
-                                        placeholder="First Name"
-                                        id="firstName"
-                                        th:field="*{firstName}"
-                                        name="firstName"
-                                        type="text"
-                                        class="form-control"
+                                    placeholder="First Name"
+                                    id="firstName"
+                                    th:field="*{firstName}"
+                                    name="firstName"
+                                    type="text"
+                                    class="form-control"
                                 />
                             </div>
                             <div class="col-md-6 pl-1">
                                 <input
-                                        placeholder="Last Name"
-                                        id="lastName"
-                                        name="lastName"
-                                        th:field="*{lastName}"
-                                        type="text"
-                                        class="form-control"
+                                    placeholder="Last Name"
+                                    id="lastName"
+                                    name="lastName"
+                                    th:field="*{lastName}"
+                                    type="text"
+                                    class="form-control"
                                 />
                             </div>
                         </div>
                         <div class="row ">
                             <div class="col-md-4 pr-1">
                                 <input
-                                        placeholder="City"
-                                        name="city"
-                                        th:field="*{city}"
-                                        type="text"
-                                        class="form-control"
+                                    placeholder="City"
+                                    name="city"
+                                    th:field="*{city}"
+                                    type="text"
+                                    class="form-control"
                                 />
                             </div>
                             <div class="col-md-4 px-1">
                                 <input
-                                        placeholder="State"
-                                        name="state"
-                                        type="text"
-                                        th:field="*{state}"
-                                        class="form-control"
+                                    placeholder="State"
+                                    name="state"
+                                    type="text"
+                                    th:field="*{state}"
+                                    class="form-control"
                                 />
                             </div>
                             <div class="col-md-4 pl-1">
                                 <input
-                                        placeholder="Country"
-                                        name="country"
-                                        th:field="*{country}"
-                                        type="text"
-                                        class="form-control"
+                                    placeholder="Country"
+                                    name="country"
+                                    th:field="*{country}"
+                                    type="text"
+                                    class="form-control"
                                 />
                             </div>
                         </div>
@@ -122,10 +122,10 @@
                         <div class="row">
                             <div class="form-group col-md-6 pr-1">
                                 <select
-                                        required
-                                        class="form-control"
-                                        name="workAuthorization"
-                                        th:field="*{workAuthorization}"
+                                    required
+                                    class="form-control"
+                                    name="workAuthorization"
+                                    th:field="*{workAuthorization}"
                                 >
                                     <option value="" selected>Work Authorization</option>
                                     <option value="US Citizen">US Citizen</option>
@@ -137,10 +137,10 @@
                             </div>
                             <div class="form-group col-md-6 pl-1">
                                 <select
-                                        required
-                                        class="form-control"
-                                        name="employmentType"
-                                        th:field="*{employmentType}"
+                                    required
+                                    class="form-control"
+                                    name="employmentType"
+                                    th:field="*{employmentType}"
                                 >
                                     <option value="" selected>Seeking Employment</option>
                                     <option value="Full-Time">Full-time</option>
@@ -157,30 +157,30 @@
                                 <div class="row">
                                     <div class="col-md-4 pr-1">
                                         <input
-                                                type="text"
-                                                th:field="*{skills[__${iterStat.index}__].id}"
-                                                hidden
+                                            type="text"
+                                            th:field="*{skills[__${iterStat.index}__].id}"
+                                            hidden
                                         />
                                         <input
-                                                placeholder="Skill Name"
-                                                type="text"
-                                                class="form-control"
-                                                th:field="*{skills[__${iterStat.index}__].name}"
+                                            placeholder="Skill Name"
+                                            type="text"
+                                            class="form-control"
+                                            th:field="*{skills[__${iterStat.index}__].name}"
                                         />
                                     </div>
                                     <div class="col-md-4 px-1">
                                         <input
-                                                placeholder="Years of Experience"
-                                                type="text"
-                                                class="form-control"
-                                                th:field="*{skills[__${iterStat.index}__].yearsOfExperience}"
+                                            placeholder="Years of Experience"
+                                            type="text"
+                                            class="form-control"
+                                            th:field="*{skills[__${iterStat.index}__].yearsOfExperience}"
                                         />
                                     </div>
                                     <div class="form-group col-md-4 pl-1">
                                         <select
-                                                required
-                                                class="form-control"
-                                                th:field="*{skills[__${iterStat.index}__].experienceLevel}"
+                                            required
+                                            class="form-control"
+                                            th:field="*{skills[__${iterStat.index}__].experienceLevel}"
                                         >
                                             <option value="Experience Level" selected>Experience Level</option>
                                             <option value="Beginner">Beginner</option>
@@ -196,9 +196,9 @@
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="text-left mt-2">
                                     <button
-                                            type="button"
-                                            class="btn btn-outline-secondary"
-                                            id="addSkill"
+                                        type="button"
+                                        class="btn btn-outline-secondary"
+                                        id="addSkill"
                                     >
                                         Add Skill
                                     </button>
@@ -212,10 +212,10 @@
                                     Profile Photo</label
                                 >
                                 <input
-                                        type="file"
-                                        name="image"
-                                        class="form-control"
-                                        accept="image/png, image/jpeg"
+                                    type="file"
+                                    name="image"
+                                    class="form-control"
+                                    accept="image/png, image/jpeg"
                                 />
                                 <input type="text" name="profilePhoto" th:field="*{profilePhoto}" class="form-control"
                                        hidden/>
@@ -226,12 +226,12 @@
                                     Resume</label
                                 >
                                 <input
-                                        sec:authorize="hasAuthority('Job Seeker')"
-                                        type="file"
-                                        name="pdf"
-                                        class="form-control"
-                                        required="true"
-                                        accept="application/pdf"
+                                    sec:authorize="hasAuthority('Job Seeker')"
+                                    type="file"
+                                    name="pdf"
+                                    class="form-control"
+                                    required="true"
+                                    accept="application/pdf"
                                 />
                                 <input type="text" name="resume" th:field="*{resume}" class="form-control" hidden/>
                                 <a sec:authorize="hasAuthority('Recruiter')"
@@ -244,10 +244,10 @@
                              sec:authorize="hasAuthority('Job Seeker')">
                             <div class="text-right">
                                 <button
-                                        type="submit"
-                                        id="submit2"
-                                        name="submit"
-                                        class="btn btn-primary base_button px-4 py-2"
+                                    type="submit"
+                                    id="submit2"
+                                    name="submit"
+                                    class="btn btn-primary base_button px-4 py-2"
                                 >
                                     Save
                                 </button>
@@ -264,72 +264,72 @@
 </div>
 </body>
 <script
-        type="text/javascript"
-        th:src="@{/webjars/jquery/jquery.min.js}"
+    type="text/javascript"
+    th:src="@{/webjars/jquery/jquery.min.js}"
 ></script>
 <script
-        type="text/javascript"
-        th:src="@{/webjars/popper.js/umd/popper.min.js}"
+    type="text/javascript"
+    th:src="@{/webjars/popper.js/umd/popper.min.js}"
 ></script>
 <script
-        type="text/javascript"
-        th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"
+    type="text/javascript"
+    th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"
 ></script>
 <script type="text/javascript" th:src="@{/js/main.js}"></script>
 <script sec:authorize="hasAuthority('Recruiter')">
     console.log("Disable inputs");
-  $("input").prop( "disabled", true );
-   $("select").prop( "disabled", true );
-       $("button").prop( "disabled", true );
+    $("input").prop( "disabled", true );
+    $("select").prop( "disabled", true );
+    $("button").prop( "disabled", true );
 </script>
 <script>
 
 
     var counter = 0;
-     $(document).on("click", "#addSkill", function (e) {
-       e.preventDefault();
-       counter++;
+    $(document).on("click", "#addSkill", function (e) {
+        e.preventDefault();
+        counter++;
         var newRow = jQuery("<div id='skill-repeat'><div class='row'>"+
-                   "    <div class='col-md-4 pr-1'>"+
-                   "     <input"+
-                   "        hidden type='text'"+
-                   "        class='form-control' "+
-                   "        name='skills["+counter+"].Id'"+
-                   "      />"+
-                   "      <input"+
-                   "        placeholder='Skill Name'"+
-                   "        type='text'"+
-                   "        class='form-control'"+
-                   "        name='skills["+counter+"].name'"+
-                   "      />"+
-                   "    </div>"+
-                   "    <div class='col-md-4 px-1'>"+
-                   "      <input"+
-                   "        placeholder='Years of Experience'"+
-                   "        type='text'"+
-                   "        class='form-control'"+
-                   "        name='skills["+counter+"].yearsOfExperience'"+
-                   "      />"+
-                   "    </div>"+
-                   "    <div class='form-group col-md-4 pl-1'>"+
-                   "      <select"+
-                   "        required"+
-                   "        class='form-control'"+
-                   "        name='skills["+counter+"].experienceLevel'"+
-                   "      >"+
-                   "        <option selected>Experience Level</option>"+
-                   "        <option value='Beginner'>Beginner</option>"+
-                   "        <option value='Intermediate'>Intermediate</option>"+
-                   "        <option value='Advance'>Advance</option>"+
-                   "      </select>"+
-                   "    </div>"+
-                   "  </div>"+
-                   "</div>");
+            "    <div class='col-md-4 pr-1'>"+
+            "     <input"+
+            "        hidden type='text'"+
+            "        class='form-control' "+
+            "        name='skills["+counter+"].Id'"+
+            "      />"+
+            "      <input"+
+            "        placeholder='Skill Name'"+
+            "        type='text'"+
+            "        class='form-control'"+
+            "        name='skills["+counter+"].name'"+
+            "      />"+
+            "    </div>"+
+            "    <div class='col-md-4 px-1'>"+
+            "      <input"+
+            "        placeholder='Years of Experience'"+
+            "        type='text'"+
+            "        class='form-control'"+
+            "        name='skills["+counter+"].yearsOfExperience'"+
+            "      />"+
+            "    </div>"+
+            "    <div class='form-group col-md-4 pl-1'>"+
+            "      <select"+
+            "        required"+
+            "        class='form-control'"+
+            "        name='skills["+counter+"].experienceLevel'"+
+            "      >"+
+            "        <option selected>Experience Level</option>"+
+            "        <option value='Beginner'>Beginner</option>"+
+            "        <option value='Intermediate'>Intermediate</option>"+
+            "        <option value='Advance'>Advance</option>"+
+            "      </select>"+
+            "    </div>"+
+            "  </div>"+
+            "</div>");
         console.log(newRow);
-       $('#skill-repeat')
-         .parent('div.parent')
-         .append(newRow);
+        $('#skill-repeat')
+        .parent('div.parent')
+        .append(newRow);
 
-     });
+    });
 </script>
 </html>

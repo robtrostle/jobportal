@@ -53,8 +53,8 @@ public class UsersType {
     @Override
     public String toString() {
         return "UsersType{" +
-                "userTypeId=" + userTypeId +
-                ", userTypeName='" + userTypeName + '\'' +
-                '}';
+            "userTypeId=" + userTypeId +
+            ", userTypeName='" + userTypeName + '\'' +
+            '}';
     }
 }

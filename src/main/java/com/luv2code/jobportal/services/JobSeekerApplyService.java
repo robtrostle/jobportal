@@ -4,9 +4,10 @@ import com.luv2code.jobportal.entity.JobPostActivity;
 import com.luv2code.jobportal.entity.JobSeekerApply;
 import com.luv2code.jobportal.entity.JobSeekerProfile;
 import com.luv2code.jobportal.repository.JobSeekerApplyRepository;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class JobSeekerApplyService {
@@ -29,5 +30,4 @@ public class JobSeekerApplyService {
   public void addNew(JobSeekerApply jobSeekerApply) {
     jobSeekerApplyRepository.save(jobSeekerApply);
   }
-
 }

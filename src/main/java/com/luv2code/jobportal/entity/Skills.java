@@ -72,11 +72,11 @@ public class Skills {
     @Override
     public String toString() {
         return "Skills{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", experienceLevel='" + experienceLevel + '\'' +
-                ", yearsOfExperience='" + yearsOfExperience + '\'' +
-                ", jobSeekerProfile=" + jobSeekerProfile +
-                '}';
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", experienceLevel='" + experienceLevel + '\'' +
+            ", yearsOfExperience='" + yearsOfExperience + '\'' +
+            ", jobSeekerProfile=" + jobSeekerProfile +
+            '}';
     }
 }

@@ -1,7 +1,5 @@
 package com.luv2code.jobportal.entity;
 
-
-
 public class RecruiterJobsDto {
 
   private Long totalCandidates;
@@ -10,8 +8,7 @@ public class RecruiterJobsDto {
   private JobLocation jobLocationId;
   private JobCompany jobCompanyId;
 
-  public RecruiterJobsDto(Long totalCandidates, Integer jobPostId, String jobTitle,
-      JobLocation jobLocationId, JobCompany jobCompanyId) {
+  public RecruiterJobsDto(Long totalCandidates, Integer jobPostId, String jobTitle, JobLocation jobLocationId, JobCompany jobCompanyId) {
     this.totalCandidates = totalCandidates;
     this.jobPostId = jobPostId;
     this.jobTitle = jobTitle;

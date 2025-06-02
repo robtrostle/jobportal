@@ -1,22 +1,14 @@
 package com.luv2code.jobportal.entity;
 
+import jakarta.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-import jakarta.persistence.UniqueConstraint;
 import java.io.Serializable;
 import java.util.Date;
-import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(uniqueConstraints = {
-    @UniqueConstraint(columnNames = { "userId", "job" })
+    @UniqueConstraint(columnNames = {"userId", "job"})
 })
 public class JobSeekerApply implements Serializable {
 
@@ -40,8 +32,7 @@ public class JobSeekerApply implements Serializable {
   public JobSeekerApply() {
   }
 
-  public JobSeekerApply(Integer id, JobSeekerProfile userId, JobPostActivity job, Date applyDate,
-      String coverLetter) {
+  public JobSeekerApply(Integer id, JobSeekerProfile userId, JobPostActivity job, Date applyDate, String coverLetter) {
     this.id = id;
     this.userId = userId;
     this.job = job;
